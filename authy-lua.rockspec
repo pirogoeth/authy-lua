@@ -18,7 +18,7 @@ standalone with lua-httpclient.
 dependencies = {
    "lua >= 5.1, < 5.3",
    "lua-resty-http >= 0.07-0",
-   "lua-httpclient >= 0.1.0-7"
+   "httpclient >= 0.1.0-7"
 }
 build = {
    type = "builtin",
