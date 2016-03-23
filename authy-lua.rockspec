@@ -1,5 +1,5 @@
 package = "authy-lua"
-version = "0.1.0-2"
+version = "0.1.0-3"
 source = {
    url = "https://glow.dev.ramcloud.io/sjohnson/authy-lua"
 }
