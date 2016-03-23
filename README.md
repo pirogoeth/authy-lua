@@ -12,6 +12,7 @@ Roadmap
 - Further documentation...
 - Tests with busted...
 - Luarocks package...
+- OneTouch API support...
 
 
 Contributing
@@ -20,6 +21,7 @@ Contributing
 Pull requests and issues are more than welcome! I need as much feedback on this as possible to continue improving the codebase.
 
 To discuss code or anything else, you can find us on IRC at irc.maio.me in #dev.
+
 
 License
 =======
