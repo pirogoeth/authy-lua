@@ -109,11 +109,11 @@ function Resource:request(method, path, data, headers)
         return http.http_request(method, url, params, nil, headers, self.verify_ssl)
     else
         if type(data) == "table" then
-            local err, encoded = pcall(json.encode, data)
-            if err then
-                error(err)
-            else
+            local okay, encoded = pcall(json.encode, data)
+            if okay then
                 return http.http_request(method, url, params, encoded, headers, self.verify_ssl)
+            else
+                error(encoded)
             end
         else
             return http.http_request(method, url, params, data, headers, self.verify_ssl)
@@ -148,11 +148,11 @@ function Instance:_init(resource, response)
     end
 
     if response.body then
-        local err, body = pcall(json.decode, response.body)
-        if err then
-            self.content = response.body
-        else
+        local okay, body = pcall(json.decode, response.body)
+        if okay then
             self.content = body
+        else
+            self.content = response.body
         end
     end
 end

@@ -13,7 +13,7 @@ function _M.json_api(api_url)
         api_url = _default_api
     end
 
-    return string.format(_default_api, "json")
+    return string.format(api_url, "json")
 end
 
 function _M.xml_api(api_url)
@@ -21,7 +21,7 @@ function _M.xml_api(api_url)
         api_url = _default_api
     end
 
-    return string.format(_default_api, "xml")
+    return string.format(api_url, "xml")
 end
 
 function _M.create_client(api_key, api_url)

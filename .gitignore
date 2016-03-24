@@ -1,0 +1,6 @@
+# Coverage stats
+luacov.stats.out
+
+# Testing envvars
+authy-testing.env
+authy-prod.env

@@ -89,9 +89,8 @@ local function http_request(method, url, params, data, headers, ssl_verify)
             end
         end
 
-        local status, response = pcall(httpc.request, httpc, url, params, method, opts)
-
-        if status then
+        local okay, response = pcall(httpc.request, httpc, url, params, method, opts)
+        if okay then
             return {
                 status_code = response.code,
                 headers = response.headers,

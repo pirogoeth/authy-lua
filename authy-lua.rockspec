@@ -1,5 +1,5 @@
 package = "authy-lua"
-version = "0.1.0-3"
+version = "0.1.0-4"
 source = {
    url = "https://glow.dev.ramcloud.io/sjohnson/authy-lua"
 }
@@ -18,7 +18,13 @@ standalone with lua-httpclient.
 dependencies = {
    "lua >= 5.1, < 5.3",
    "lua-resty-http >= 0.07-0",
-   "httpclient >= 0.1.0-7"
+   "httpclient >= 0.1.0-7",
+}
+extra_dependencies = {
+    dev = {
+        "busted >= 2.0.rc11-0",
+        "luacov >= 0.10.0-1",
+    },
 }
 build = {
    type = "builtin",
